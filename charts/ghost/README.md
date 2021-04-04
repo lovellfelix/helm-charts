@@ -27,8 +27,11 @@ This chart bootstraps a [Ghost](https://github.com/docker-library/ghost) deploym
 To install the chart with the release name `my-release`:
 
 ```console
-$ unzip ghost.zip
-$ helm install --name my-release ghost/
+helm repo add lovellfelix https://lovellfelix.github.io/helm-charts/
+
+helm repo update
+
+helm install my-release lovellfelix/ghost
 ```
 
 The command deploys Ghost on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
@@ -40,7 +43,7 @@ The command deploys Ghost on the Kubernetes cluster in the default configuration
 To uninstall/delete the `my-release` deployment:
 
 ```console
-$ helm delete my-release
+helm delete my-release
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
@@ -109,7 +112,7 @@ policy                                             | `IfNotPresent`             
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```console
-$ helm install --name my-release \
+helm install --name my-release \
   --set ghost.configSecrets.database__connection__password=dbPass \
     ghost/
 ```
@@ -117,7 +120,7 @@ $ helm install --name my-release \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install --name my-release -f values.yaml ghost/
+helm install --name my-release -f values.yaml ghost/
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
