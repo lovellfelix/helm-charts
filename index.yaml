@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  ghost:
+  - apiVersion: v2
+    appVersion: 3.42.4
+    created: "2021-04-04T22:21:43.89841054Z"
+    description: A Helm chart for Ghost on Kubernetes
+    digest: 4d8c0e9b0a61102c8bf0d59deae5afa9ee4b600436bc1b0c66a4375f131e0ab6
+    name: ghost
+    type: application
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/ghost-1.0.0/ghost-1.0.0.tgz
+    version: 1.0.0
   openvpn:
   - apiVersion: v2
     appVersion: 2.5.0
