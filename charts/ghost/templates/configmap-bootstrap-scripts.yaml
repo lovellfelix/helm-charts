@@ -1,0 +1,16 @@
+{{- if .Values.bootstrap.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "ghost.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ template "ghost.name" . }}
+    chart: {{ template "ghost.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  bootstrap.sh: |-
+{{ .Values.bootstrap.script | indent 4 }}
+{{- end }}
+
