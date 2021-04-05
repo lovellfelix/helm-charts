@@ -5,6 +5,8 @@ metadata:
   name: "data-{{ template "ghost.fullname" . }}"
   labels:
     app: "{{ template "ghost.fullname" . }}"
+  annotations:
+    helm.sh/resource-policy: keep
 spec:
   accessModes:
     - {{ .Values.persistence.accessMode | quote }}
