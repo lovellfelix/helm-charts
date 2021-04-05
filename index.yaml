@@ -24,6 +24,29 @@ entries:
   openvpn:
   - apiVersion: v2
     appVersion: 2.5.0
+    created: "2021-04-05T02:15:10.790977918Z"
+    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate generation is also part of the deployment, and this chart will generate client keys as needed.
+    digest: 703c2336185a8476ea29eab9f1c5e95bcc339cd42141795ead68a8c74976378c
+    home: https://openvpn.net/index.php/open-source.html
+    icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
+    keywords:
+    - openvpn
+    - vpn
+    - tunnel
+    - network
+    - service
+    - connectivity
+    - encryption
+    name: openvpn
+    sources:
+    - https://github.com/lovellfelix/openvpn-docker
+    - https://lovellfelix.github.io/helm-charts/openvpn
+    - https://github.com/lovellfelix/helm-charts
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/openvpn-1.1.0/openvpn-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 2.5.0
     created: "2021-04-03T03:59:30.162838775Z"
     description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate generation is also part of the deployment, and this chart will generate client keys as needed.
     digest: 1da02369caa0a1d7b0964e2384102975ad2301736d0f57906531f309a9686bcf
