@@ -21,6 +21,16 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/ghost-1.0.0/ghost-1.0.0.tgz
     version: 1.0.0
+  nodejs:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-04-12T16:29:11.054854493Z"
+    description: Node.js Helm Chart
+    digest: 905e0b8f5c15000b2533931ac959b1a6569270038857e3030f3d8fdae4620957
+    name: nodejs
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/nodejs-1.0.0/nodejs-1.0.0.tgz
+    version: 1.0.0
   openvpn:
   - apiVersion: v2
     appVersion: 2.5.0
