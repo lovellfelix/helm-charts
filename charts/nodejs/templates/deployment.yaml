@@ -48,7 +48,7 @@ spec:
           - name: NODE_ENV
             value: {{ .Values.appEnv }}
           - name: PORT
-            value: "{{ .Values.service.internalPort }}"
+            value: "{{ .Values.service.internalPort | default 5000 }}"
           {{- range $key, $value := .Values.environment }}
           - name: {{ $key }}
             value: {{ $value | quote }}
@@ -66,7 +66,7 @@ spec:
           livenessProbe:
             httpGet:
               path: {{ .Values.liveness.path | default "/healthz" }}
-              port: {{ .Values.liveness.internalPort| default 5000 }}
+              port: {{ .Values.service.internalPort | default 5000 }}
             initialDelaySeconds: {{ .Values.liveness.delay | default 15 }}
             timeoutSeconds: {{ .Values.liveness.timeout | default 15 }}
             periodSeconds: {{ .Values.liveness.periodSeconds | default 15 }}
@@ -75,7 +75,7 @@ spec:
           readinessProbe:
             httpGet:
               path: {{ .Values.readiness.path | default "/healthz" }}
-              port: {{ .Values.readiness.internalPort | default 5000 }}
+              port: {{ .Values.service.internalPort | default 5000 }}
             initialDelaySeconds: {{ .Values.readiness.delay | default 15 }}
             timeoutSeconds: {{ .Values.readiness.timeout | default 15 }}
             periodSeconds: {{ .Values.readiness.periodSeconds | default 15 }}
