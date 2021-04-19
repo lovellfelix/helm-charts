@@ -24,6 +24,15 @@ entries:
   nodejs:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-04-19T16:17:44.964645179Z"
+    description: Node.js Helm Chart
+    digest: 6b49aeca30c8d563abfb3ae29c3d48732be8490c0867808b82c08327a6b59fff
+    name: nodejs
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/nodejs-1.2.0/nodejs-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-04-13T04:11:14.314265402Z"
     description: Node.js Helm Chart
     digest: 22b9aacd697fd96561ce4af0118b9542bc4870bf9cc6539cae303e4ff1048854
