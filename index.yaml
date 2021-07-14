@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   ghost:
   - apiVersion: v2
+    appVersion: 4.9.4
+    created: "2021-07-14T15:44:30.043732885Z"
+    description: A Helm chart for Ghost on Kubernetes
+    digest: 5c27c8c73ff10a80e86be682280060eab29802bd4a183492f1db4bf2326c2bc4
+    name: ghost
+    type: application
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/ghost-1.4.0/ghost-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v2
     appVersion: 4.1.2
     created: "2021-04-05T02:13:01.149459073Z"
     description: A Helm chart for Ghost on Kubernetes
@@ -53,7 +63,9 @@ entries:
   - apiVersion: v2
     appVersion: 2.5.0
     created: "2021-04-05T02:15:10.790977918Z"
-    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate generation is also part of the deployment, and this chart will generate client keys as needed.
+    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
+      generation is also part of the deployment, and this chart will generate client
+      keys as needed.
     digest: 703c2336185a8476ea29eab9f1c5e95bcc339cd42141795ead68a8c74976378c
     home: https://openvpn.net/index.php/open-source.html
     icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
@@ -76,7 +88,9 @@ entries:
   - apiVersion: v2
     appVersion: 2.5.0
     created: "2021-04-03T03:59:30.162838775Z"
-    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate generation is also part of the deployment, and this chart will generate client keys as needed.
+    description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
+      generation is also part of the deployment, and this chart will generate client
+      keys as needed.
     digest: 1da02369caa0a1d7b0964e2384102975ad2301736d0f57906531f309a9686bcf
     home: https://openvpn.net/index.php/open-source.html
     icon: https://forums.openvpn.net/styles/openvpn/theme/images/ovpnlogo.png
@@ -100,7 +114,8 @@ entries:
   - apiVersion: v2
     appVersion: 3.8.7
     created: "2021-04-03T03:52:10.531135622Z"
-    description: Highly available RabbitMQ cluster, the open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
+    description: Highly available RabbitMQ cluster, the open source message broker
+      software that implements the Advanced Message Queuing Protocol (AMQP).
     digest: c7e9c11a6d326383ae705fc2d9aa18eff6fcdae2a8b8dbd9268cf6a1a49c5257
     home: https://www.rabbitmq.com
     icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
@@ -118,4 +133,4 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/rabbitmq-ha-1.0.0/rabbitmq-ha-1.0.0.tgz
     version: 1.0.0
-generated: "2021-04-03T03:52:10.315913463Z"
+generated: "2021-07-14T15:44:30.043950283Z"
