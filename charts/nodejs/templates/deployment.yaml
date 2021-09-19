@@ -37,7 +37,7 @@ spec:
       securityContext:
 {{ toYaml .Values.securityContext | indent 8 }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{ template "nodejs.name" . }}-{{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
           ports:
