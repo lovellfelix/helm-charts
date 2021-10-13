@@ -74,12 +74,7 @@ spec:
             - 127.0.0.1
             - "{{ .Values.service.internalPort }}"
         resources:
-          requests:
-            cpu: "{{ .Values.resources.requests.cpu }}"
-            memory: "{{ .Values.resources.requests.memory }}"
-          limits:
-            cpu: "{{ .Values.resources.limits.cpu }}"
-            memory: "{{ .Values.resources.limits.memory }}"
+          {{- toYaml .Values.resources | nindent 12 }}
         volumeMounts:
           - mountPath: /etc/openvpn/setup
             name: openvpn
