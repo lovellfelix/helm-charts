@@ -1,7 +1,7 @@
 name: openvpn
 apiVersion: v2
 appVersion: 2.5.2
-version: 1.1.0
+version: 1.2.0
 description: A Helm chart to install an openvpn server inside a kubernetes cluster.  Certificate
   generation is also part of the deployment, and this chart will generate client keys
   as needed.
