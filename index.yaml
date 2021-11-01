@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   ghost:
   - apiVersion: v2
+    appVersion: 4.21.0
+    created: "2021-11-01T23:14:16.883556078Z"
+    description: A Helm chart for Ghost on Kubernetes
+    digest: 23366c7dc177c8cc1174cd56e1fd3aeba5d30e02215867063454d87b249139b4
+    name: ghost
+    type: application
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/ghost-1.8.0/ghost-1.8.0.tgz
+    version: 1.8.0
+  - apiVersion: v2
     appVersion: 4.14.0
     created: "2021-09-18T04:07:23.482584974Z"
     description: A Helm chart for Ghost on Kubernetes
@@ -219,4 +229,4 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/rabbitmq-ha-1.0.0/rabbitmq-ha-1.0.0.tgz
     version: 1.0.0
-generated: "2021-10-13T00:34:34.636259886Z"
+generated: "2021-11-01T23:14:16.883605878Z"
