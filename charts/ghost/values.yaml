@@ -11,7 +11,7 @@ updateStrategy: {}
   #   maxUnavailable: 0
 image:
   repository: ghost
-  tag: 4.21.0
+  tag: 4.27.2
   pullPolicy: IfNotPresent
 
 # Ghost environment variables
