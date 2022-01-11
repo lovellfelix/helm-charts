@@ -3,4 +3,4 @@ name: ghost
 description: A Helm chart for Ghost on Kubernetes
 type: application
 version: 1.9.0
-appVersion: 4.27.2
+appVersion: 4.32.1
