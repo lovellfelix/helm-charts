@@ -134,6 +134,15 @@ entries:
   nodejs:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2022-03-06T17:07:09.729036751Z"
+    description: Node.js Helm Chart
+    digest: 9f16c0ae7008d56cb4f24da3424d6d84ba82851bc57913ec0027498657b253ce
+    name: nodejs
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/nodejs-1.4.2/nodejs-1.4.2.tgz
+    version: 1.4.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2022-03-06T16:17:39.890933065Z"
     description: Node.js Helm Chart
     digest: d57848fe3e7211fe6a249a53ac67b4f802d674f5bf59aba1e959f179a1d153c8
@@ -307,4 +316,4 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/rabbitmq-ha-1.0.0/rabbitmq-ha-1.0.0.tgz
     version: 1.0.0
-generated: "2022-03-06T16:17:39.891047866Z"
+generated: "2022-03-06T17:07:09.729445557Z"
