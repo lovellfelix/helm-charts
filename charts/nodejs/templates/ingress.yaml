@@ -1,6 +1,6 @@
 {{- if .Values.ingress.enabled -}}
 {{- $name := include "nodejs.name" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
+{{- $svcPort := .Values.service.port -}}
 {{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
 apiVersion: networking.k8s.io/v1
 {{ else }}
@@ -35,7 +35,7 @@ spec:
         {{- range .paths }}
           - path: {{ . }}
             backend:
-              serviceName: {{ $fullName }}
+              serviceName: {{ $name }}
               servicePort: {{ $svcPort }}
         {{- end }}
   {{- end }}
