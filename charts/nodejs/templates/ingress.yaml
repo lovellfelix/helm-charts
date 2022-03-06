@@ -1,40 +1,57 @@
-{{- if .Values.ingress.enabled -}}
-{{- $name := include "nodejs.name" . -}}
-{{- $ingressPath := .Values.ingress.path -}}
-{{- if .Capabilities.APIVersions.Has "networking.k8s.io/v1beta1" }}
+{{- if .Values.ingress.enabled }}
+{{- $fullName := include "nodejs.name" . -}}
+{{- $svcPort := .Values.service.externalPort -}}
+{{- $maxSize := .Values.ingress.maxBodySize -}}
+{{- $apiVersion := .Capabilities.APIVersions -}}
+{{- if $apiVersion.Has "networking.k8s.io/v1" }}
 apiVersion: networking.k8s.io/v1
-{{ else }}
+{{- else }}
+{{- if $apiVersion.Has "networking.k8s.io/v1beta1" }}
+apiVersion: networking.k8s.io/v1beta1
+{{- else }}
 apiVersion: extensions/v1beta1
+{{- end }}
 {{- end }}
 kind: Ingress
 metadata:
-  name: {{ $name }}
-  namespace: {{ .Release.Namespace }}
+  name: {{ $fullName }}
   labels:
     {{- include "nodejs.metaLabels" . | nindent 4 }}
-{{- with .Values.ingress.annotations }}
   annotations:
-{{ toYaml . | indent 4 }}
-{{- end }}
+    nginx.ingress.kubernetes.io/proxy-body-size: {{ $maxSize }}
+  {{- with .Values.ingress.annotations }}
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
 {{- if .Values.ingress.tls }}
   tls:
-  {{- range .Values.ingress.tls }}
+    {{- range .Values.ingress.tls }}
     - hosts:
-      {{- range .hosts }}
-        - {{ . }}
-      {{- end }}
+        {{- range .hosts }}
+        - {{ . | quote }}
+        {{- end }}
       secretName: {{ .secretName }}
+    {{- end }}
   {{- end }}
-{{- end }}
   rules:
-  {{- range .Values.ingress.hosts }}
-    - host: {{ . }}
+    {{- range .Values.ingress.hosts }}
+    - host: {{ .host | quote }}
       http:
         paths:
-          - path: {{ $ingressPath }}
+          {{- range .paths }}
+          - path: {{ . }}
+            {{- if $apiVersion.Has "networking.k8s.io/v1" }}
+            pathType: Prefix
             backend:
-              serviceName: {{ $name }}
-              servicePort: http
+              service:
+                name: {{ $fullName }}
+                port:
+                  number: {{ $svcPort }}
+            {{- else }}
+            backend:
+              serviceName: {{ $fullName }}
+              servicePort: {{ $svcPort }}
+            {{- end }}
+          {{- end }}
+    {{- end }}
   {{- end }}
-{{- end }}

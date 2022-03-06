@@ -46,16 +46,20 @@ readiness:
 
 ingress:
   enabled: false
+  ## Maximal body size (default: 2m - increase if uploads failing)
+  maxBodySize: 2m
+
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
-  path: /
   hosts:
-    - chart-example.local
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+    - host: chart-example.local
+      paths: 
+        - /
+  tls: 
+   - secretName: chart-example-tls
+     hosts:
+       - chart-example.local
 
 extraPorts: []
 
