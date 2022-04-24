@@ -99,6 +99,9 @@ openvpn:
   #    kubectl create secret generic openvpn-keystore-secret --from-file=./server.key --from-file=./ca.crt --from-file=./server.crt --from-file=./dh.pem [--from-file=./crl.pem]  [--from-file=./ta.key]
   # Push a `dhcp-option DOMAIN` config
   dhcpOptionDomain: true
+  customDNS:
+    enabled: false
+    servers: []
   # Redirect all client traffic through VPN
   redirectGateway: true
   # Use/generate certificate revocation list
