@@ -455,4 +455,26 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/rabbitmq-ha-1.0.0/rabbitmq-ha-1.0.0.tgz
     version: 1.0.0
-generated: "2022-08-14T12:03:35.053749078Z"
+  synology-csi:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2023-11-02T16:24:08.094636482Z"
+    description: Installs the Synology CSI Driver.
+    digest: 5efc3aa9c291a83e7bf2e4ada540ef03bd0db10e78269ba056f13da2be6ce6db
+    home: https://github.com/christian-schlichtherle/synology-csi-chart
+    keywords:
+    - Synology
+    - CSI Driver
+    maintainers:
+    - name: Christian Schlichtherle
+      url: https://github.com/christian-schlichtherle
+    - name: Dominic Cardellino
+      url: https://github.com/lovellfelix
+    name: synology-csi
+    sources:
+    - https://github.com/christian-schlichtherle/synology-csi-chart/tree/main
+    - https://github.com/SynologyOpenSource/synology-csi/tree/main
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/synology-csi-0.4.0/synology-csi-0.4.0.tgz
+    version: 0.4.0
+generated: "2023-11-02T16:24:08.094800185Z"
