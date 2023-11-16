@@ -21,7 +21,7 @@ images:
     imagePullPolicy: IfNotPresent
     tag: v3.3.0
   nodeDriverRegistrar:
-    image: k8s.gcr.io/sig-storage/csi-node-driver-registrar
+    image: registry.k8s.io/sig-storage/csi-node-driver-registrar
     imagePullPolicy: IfNotPresent
     tag: v2.3.0
   provisioner:
