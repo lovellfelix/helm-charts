@@ -29,7 +29,7 @@ images:
     imagePullPolicy: IfNotPresent
     tag: v3.0.0
   resizer:
-    image: k8s.gcr.io/sig-storage/csi-resizer
+    image: registry.k8s.io/sig-storage/csi-resizer
     imagePullPolicy: IfNotPresent
     tag: v1.3.0
   snapshotter:
