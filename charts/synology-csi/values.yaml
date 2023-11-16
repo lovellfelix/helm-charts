@@ -17,7 +17,7 @@ connections:
 
 images:
   attacher:
-    image: k8s.gcr.io/sig-storage/csi-attacher
+    image: registry.k8s.io/sig-storage/csi-attacher
     imagePullPolicy: IfNotPresent
     tag: v3.3.0
   nodeDriverRegistrar:
