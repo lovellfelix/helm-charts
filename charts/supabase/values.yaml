@@ -82,7 +82,7 @@ studio:
 kong:
   image:
     repository: kong
-    tag: 2.8.1
+    tag: 2.8.5
   # set the service account to be used, default if left empty
   serviceAccountName: ""
   # mount the service account token
