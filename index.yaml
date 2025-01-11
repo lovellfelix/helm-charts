@@ -458,6 +458,17 @@ entries:
   supabase:
   - apiVersion: v2
     appVersion: 1.24.09
+    created: "2025-01-11T06:40:38.107631918Z"
+    description: Helm chart to deploy supabase or at least try.
+    digest: 5e310169be57bc42f3fc46f6f7b52541a8840c37105cc48af2588b50c44b4ee4
+    icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
+    name: supabase
+    type: application
+    urls:
+    - https://github.com/lovellfelix/helm-charts/releases/download/supabase-1.24.10/supabase-1.24.10.tgz
+    version: 1.24.10
+  - apiVersion: v2
+    appVersion: 1.24.09
     created: "2025-01-10T19:56:04.576758114Z"
     description: Helm chart to deploy supabase or at least try.
     digest: 918b169631b4a2426263604e54474b6dd85b305bfb425eba72492b07c60aca02
@@ -489,4 +500,4 @@ entries:
     urls:
     - https://github.com/lovellfelix/helm-charts/releases/download/synology-csi-0.4.0/synology-csi-0.4.0.tgz
     version: 0.4.0
-generated: "2025-01-10T19:56:04.576856218Z"
+generated: "2025-01-11T06:40:38.107724741Z"
