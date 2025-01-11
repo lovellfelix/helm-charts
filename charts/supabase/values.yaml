@@ -218,7 +218,7 @@ functions:
   enabled: true
   image: 
     repository: supabase/edge-runtime
-    tag: v1.58.3
+    tag: v1.65.3
   # set the service account to be used, default if left empty
   serviceAccountName: ""
   # mount the service account token
