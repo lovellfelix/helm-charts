@@ -151,7 +151,7 @@ meta:
   enabled: true
   image:
     repository: supabase/postgres-meta
-    tag: v0.83.2
+    tag: v0.85.3
   # set the service account to be used, default if left empty
   serviceAccountName: ""
   # mount the service account token
