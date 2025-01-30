@@ -167,7 +167,7 @@ rest:
   enabled: true
   image: 
     repository: postgrest/postgrest
-    tag: v12.2.0
+    tag: v12.2.6
   # set the service account to be used, default if left empty
   serviceAccountName: ""
   # mount the service account token
