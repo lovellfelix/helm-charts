@@ -30,7 +30,7 @@ db:
   internal:
     image:
       repository: supabase/postgres
-      tag: 15.1.1.78
+      tag: 15.8.1.032
     # set the service account to be used, default if left empty
     serviceAccountName: ""
     # mount the service account token
