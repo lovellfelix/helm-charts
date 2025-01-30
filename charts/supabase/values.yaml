@@ -107,7 +107,7 @@ auth:
   enabled: true
   image:
     repository: supabase/gotrue
-    tag: v2.158.1
+    tag: v2.169.0
   # set the service account to be used, default if left empty
   serviceAccountName: ""
   # mount the service account token
